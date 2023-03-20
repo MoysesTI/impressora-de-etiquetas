@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Lauro Etiquetas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="./index.html"><li>Fomulario</li></a>
+                <a href="./product.html"><li>Etiquetas</li></a>
+                <a ><li>Detales</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="models" style="display: none;">
+            <div class="tatto-item">
+                <div class="cart--item">
+                    <div class="containerBox">
+                        <div class="etiquetasList">
+                            <h3><span class="name-Etiquetas"></span></h3>
+                            <div class="functionEtiquetas">
+                                <i class="bi bi-pencil-fill updateEdit"></i>
+                                <i class="bi bi-printer imprimirEtiqueta"></i>
+                                <i class="bi bi-trash removeEtiqueta"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <main id="forms-etiquetas">
+        <form id="forms">
+            <h3 >Nome da Etiqueta
+            </h3>
+            <input type="text" id="name-Etiquetas" name="">
+            <br>
+            <h3>Composição Básica do Produto
+            </h3>
+                <input class="inpts" type="text" id="composition-product">
+            <h3>
+                Indicação do produto
+            </h3>
+            <input class="inpts" type="text" id="indication-product">
+            <h3>
+                Modo de usar
+            </h3>
+            <input class="inpts" type="text" id="module-user">
+            <br>
+                <h3>
+                    Níveis de garantia do produto
+                </h3>
+            <br>
+            <ul id="niveis-products">
+                <li>Umidade ( Máx.)</li>
+                <input type="number" placeholder="120,00">
+                <input type="number" placeholder="12,0">
+                <li>Proteína bruta ( Mín.)</li>
+                <input type="number" placeholder="90">
+                <input type="number" placeholder="9,0">
+                <li>Extrato etéreo ( Mín.)</li>
+                <input type="number" placeholder="40">
+                <input type="number" placeholder="4,0">
+                <li>Matéria fibrosa ( Máx.)</li>
+                <input type="number" placeholder="80">
+                <input type="number" placeholder="8,0">
+                <li>Matéria mineral (Máx.) </li>
+                <input type="number" placeholder="60">
+                <input type="number" placeholder="6,0">
+                <li>Cálcio ( Mín.)</li>
+                <input type="number" placeholder="8.000,0 0">
+                <input type="number" placeholder="0,8">
+                <li>Fosforo ( Mín.)</li>
+                <input type="number" placeholder="2.000,00">
+                <input type="number" placeholder="0,2">
+            </ul>
+            <br>
+            <h3>Validade do produto</h3>
+            <br>
+            <ul>
+                <input type="text" placeholder="FAB. 03/05/2022">
+                <input type="text" placeholder="VAL. 03/05/2024">
+                <input type="text" placeholder="LOT. 32.774">
+            </ul>
+            <br>
+            <h3>Modo de conservação</h3><br>
+            <input class="inpts" type="text">
+            <br>
+            <br>
+            <div>
+                <button type="button" class="enviar" onclick="criarProduct()">Enviar</button>
+            </div>
+        </form>
+        <section class="listaEtiquetas">
+            <div class="cart">
+            </div>
+            <div class="tatto-area">
+            </div>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="./firebase-init.js"></script>
+    <script src="/impressao.js"></script>
+    <script src="./listaEtiquetas.js"></script>
+</body>
+</html>
